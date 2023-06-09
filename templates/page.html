@@ -1,0 +1,15 @@
+<html>
+<head>
+<link rel="stylesheet" href='/static/style.css' />
+</head>
+<body>
+  <form action="/hello" method="POST">
+    <p><input type="text" name="name" placeholder="Entrez votre nom"></p>
+    <input type="submit" value="Soumettre">
+  </form>
+  
+  {% if name %}
+    <h1>Hello {{ name }}!</h1>
+  {% endif %}
+</body>
+</html>
