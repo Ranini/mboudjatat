@@ -19,3 +19,20 @@ function handleKeyDown(event) {
 }
 
 document.addEventListener("keydown", handleKeyDown);
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Obtenez l'élément de date du serveur
+  var timeElement = document.getElementById("server-date");
+
+  // Vérifiez si l'élément existe
+  if (timeElement) {
+    // Obtenez l'heure actuelle
+    var currentTime = new Date();
+    var timeString = "La date de ce serveur est : " + currentTime.toLocaleString();
+
+    // Mettez à jour le contenu de l'élément avec l'heure du serveur
+    timeElement.textContent = timeString;
+  }
+});
+
+

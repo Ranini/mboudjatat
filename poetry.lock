@@ -382,7 +382,7 @@ test = ["pylint", "pycodestyle", "pyflakes", "pytest", "pytest-cov", "coverage"]
 
 [[package]]
 name = "pytoolconfig"
-version = "1.2.4"
+version = "1.2.5"
 description = "Python tool configuration"
 category = "dev"
 optional = false
@@ -395,9 +395,17 @@ tomli = {version = ">=2.0.1", markers = "python_version < \"3.11\""}
 
 [package.extras]
 doc = ["tabulate (>=0.8.9)", "sphinx (>=4.5.0)"]
-gen_docs = ["sphinx (>=4.5.0)", "sphinx-autodoc-typehints (>=1.18.1)", "sphinx-rtd-theme (>=1.0.0)", "pytoolconfig"]
+gendocs = ["sphinx (>=4.5.0)", "sphinx-autodoc-typehints (>=1.18.1)", "sphinx-rtd-theme (>=1.0.0)", "pytoolconfig"]
 global = ["platformdirs (>=1.4.4)"]
 validation = ["pydantic (>=1.7.4)"]
+
+[[package]]
+name = "pytz"
+version = "2023.3"
+description = "World timezone definitions, modern and historical"
+category = "main"
+optional = false
+python-versions = "*"
 
 [[package]]
 name = "replit"
@@ -572,7 +580,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10.0,<3.11"
-content-hash = "b8c52bc276da744c44fb104c65b4d40a874b5f9ccc4d8a4ce301a52b3fbfef9c"
+content-hash = "67e884a6bb11a0bed27b2948ebebdc31d7d1c8b2a51b3bbb15d3bb07ad52cf1d"
 
 [metadata.files]
 aiohttp = []
@@ -609,6 +617,7 @@ pyflakes = []
 pyseto = []
 python-lsp-jsonrpc = []
 pytoolconfig = []
+pytz = []
 replit = []
 replit-python-lsp-server = []
 requests = []

@@ -1,15 +1,20 @@
+<!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href='/static/style.css' />
+  <h1><title>Le site du meilleur prof du collège</title></h1>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA" crossorigin="anonymous" />
+
 </head>
 <body>
-    <div class="top-right">
-        <h2><p>La date de se serveur est: {{ time }}</p></h2>
-    </div>
-      <h1><p>Le culte du meilleur prof au monde</p></h1>
-    <div class="center-link">
-        <p><a href="/boudjatat">Pourquoi M. Boudjatat est le meilleur prof au monde?</a></p>
-    </div>
-      <p><a href="/hello">message perso</a></p>
-  </body>
+  <div class="top-right">
+    <h2>La date de ce serveur est : {{ time }}</h2>
+  </div>
+  <h1>Le culte du meilleur prof au monde</h1>
+  <div class="center-link">
+    <p><a href="/boudjatat" class="green-button">Pourquoi M. Boudjatat est le meilleur prof au monde ?</a></p>
+    <p><a href="/hello" class="green-button">Message de l'élève qui a fait le site</a></p>
+  </div>
+  <script src="/static/script.js"></script>
+</body>
 </html>

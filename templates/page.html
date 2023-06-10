@@ -1,15 +1,40 @@
+<!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href='/static/style.css' />
+  <title>Le site du meilleur prof du collège</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA" crossorigin="anonymous" />
 </head>
 <body>
-  <form action="/hello" method="POST">
-    <p><input type="text" name="name" placeholder="Entrez votre nom"></p>
-    <input type="submit" value="Soumettre">
-  </form>
-  
-  {% if name %}
-    <h1>Hello {{ name }}!</h1>
-  {% endif %}
+  <div class="top-right">
+    <h2 id="server-date">La date de ce serveur est : </h2>
+  </div>
+  <strong>Le culte du meilleur prof au monde</strong>
+  <div class="center-link">
+    {% if name %}
+      <p>Cher {{ name }},</p>
+      <p>Je suis ravi de vous présenter ce site web, réalisé spécialement pour m.boudjatat en guise de cadeau. Ce site est le fruit de mon travail et de mon appréciation pour m.boudjatat en tant que professeur exceptionnel.</p>
+      <p>J'ai créé ce site avec les outils que je maîtrise plus ou mois et chatgpt, dont vous avez sûrement entendu parler. Parmi eux, l'utilisation de langages de programmation tels que <i class="fab fa-python"></i> Python, <i class="fab fa-html5"></i> HTML/CSS et <i class="fab fa-js"></i> JavaScript pour la mise en page et l'interactivité.</p>
+      <p>Ce site est ma façon de lui exprimer exprimer ma gratitude et mon admiration pour votre gentillesse, votre sens de l'humour et le temps que vous consacrez à vos élèves. J'espère qu'il lui plaira et qu'il témoignera de mon profond respect envers vous.</p>
+      <p>Merci encore pour tout ce que vous faites.</p>
+      <p>Bien cordialement,</p>
+      <p>Rani el Jouzou</p>
+    {% else %}
+      <p>Veuillez remplir le formulaire ci-dessous pour accéder au contenu.</p>
+      <form action="/hello" method="POST">
+        <p><input type="text" name="name" placeholder="Entrez votre nom"></p>
+        <input type="submit" value="Soumettre" class="submit-button">
+      </form>
+    {% endif %}
+    <a href="/" class="home-button"><i class="fas fa-home"></i> Accueil</a>
+    <div class="made-with">
+      <p>Made with</p>
+      <p><i class="fab fa-flask"></i> Flask</p>
+      <p><i class="fab fa-python"></i> Python</p>
+      <p><i class="fab fa-html5"></i> HTML/CSS</p>
+      <p><i class="fab fa-js"></i> JavaScript</p>
+    </div>
+  </div>
+  <script src="/static/script.js"></script>
 </body>
 </html>
